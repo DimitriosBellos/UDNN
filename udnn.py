@@ -1,6 +1,6 @@
 import numpy as np
-import udnn.trainer as ut
-import udnn.upscaler as ur
+import src.trainer as ut
+import src.upscaler as ur
 
 model = ut.train('../Diamond/tomo_p1_dark_flat_field_correction.h5', '/1-DarkFlatFieldCorrection-tomo/data', 'demo', output_folder=None, validation_filename=None,
                  validation_dataset=None, size=128, H=None, W=None, train_sinograms=np.arange(1,2159,2),
