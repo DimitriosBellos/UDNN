@@ -52,6 +52,7 @@ class DataLoaderUpscaler(Dataset):
             d, avg, std = DataLoaderUpscaler.Normalize(data)
             d = d + 0.5
         else:
+            d = data
             avg = 0.5
             std = 1/float(4)	
         X = torch.Tensor(1, d.shape[0], d.shape[1])
