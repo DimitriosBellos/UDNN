@@ -1,0 +1,30 @@
+package:
+  name: udnn
+  version: 0.1
+
+source:
+  url: https://github.com/DimitriosBellos/UDNN/archive/v1.0.0.tar.gz
+  sha256: 936d3269a0bc92dabe4c9720c288735a5c0fd4ac0bf941037691300a98adf65c
+
+build:
+  number: 0
+
+requirements:
+  host:
+    - python
+    - setuptools
+  run:
+    - python
+    - pytorch
+    - numpy
+    - h5py
+    - pillow
+
+about:
+  home: https://github.com/DimitriosBellos/UDNN
+  license: Apache Software Licence 2.0
+  summary: A Convolutional Neural Network for fast upscaling of low-resolution sinograms in x-ray CT time-series
+
+extra:
+  recipe-maintainers:
+    DimitriosBellos

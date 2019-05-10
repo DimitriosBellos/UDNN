@@ -2,18 +2,13 @@ import numpy as np
 import torch as torch
 import torch.nn as nn
 import torch.optim as optim
-from udnn.utils.timer import Timer
 import sys
 import os
 import math
-from udnn.utils.colors import Colors
-from udnn.utils.logger import Logger
 from torch.utils.data import DataLoader
 import h5py
-from src.model import Model
-from src.utils import presenter
-from src.utils.dataloader import DataLoaderNoCI
-from src.utils.dataloader import Denormalize
+from .model import Model
+from .utils import Colors, Timer, PrintProgress, Logger, DataLoaderNoCI, Denormalize
 torch.backends.cudnn.deterministic = True
 
 
@@ -108,6 +103,9 @@ def train(train_filename, train_dataset, name, output_folder=None, validation_fi
 
     timer = Timer()
 
+    print_train = PrintProgress()
+    print_eval = PrintProgress()
+
     error = 0
     CI = 0
     errorCI = 0
@@ -126,7 +124,7 @@ def train(train_filename, train_dataset, name, output_folder=None, validation_fi
         sinOrder = torch.randperm(num_train_sino)
 
         if i % valfreq == 0:
-            leng = int((presenter.getTermLength() / 2) - 4)
+            leng = int((PrintProgress.getTermLength() / 2) - 4)
             sys.stdout.write(syss.Blue + '\n')
             for m in range(0, leng):
                 sys.stdout.write(syss.Blue + '-')
@@ -181,7 +179,7 @@ def train(train_filename, train_dataset, name, output_folder=None, validation_fi
                 totalErrorCI += errorCI * avg.shape[0]
 
             if display:
-                presenter.PrintProgress(backpropagations, totalepoches, [(' %1.8f ' % error), (' %1.8f ' % errorCI)])
+                print_train(backpropagations, totalepoches, [(' %1.8f ' % error), (' %1.8f ' % errorCI)])
 
             backpropagations += 1
 
@@ -201,7 +199,7 @@ def train(train_filename, train_dataset, name, output_folder=None, validation_fi
             totalError = 0
             totalErrorCI = totalCIval
 
-            leng = int((presenter.getTermLength() / 2) - 4)
+            leng = int((PrintProgress.getTermLength() / 2) - 4)
             sys.stdout.write(syss.Blue + '\n\n')
             for m in range(0, leng - 1):
                 sys.stdout.write(syss.Blue + '-')
@@ -253,7 +251,7 @@ def train(train_filename, train_dataset, name, output_folder=None, validation_fi
                         totalErrorCI += errorCI * avg.shape[0]
 
                     if display:
-                        presenter.PrintProgressE((l + 1) + k * math.ceil(num_valid_sino / batch),
+                        print_eval((l + 1) + k * math.ceil(num_valid_sino / batch),
                                                  num_val_patches * math.ceil(num_valid_sino / batch),
                                                  [(' %1.8f ' % error), (' %1.8f ' % errorCI)])
 

@@ -4,10 +4,8 @@ import torch as torch
 import sys
 from torch.utils.data import DataLoader
 
-from src.model import Model
-from src.utils.merge import Interlace
-from src.utils.dataloader import DataLoaderUpscaler
-from src.utils.dataloader import Denormalize
+from .model import Model
+from .utils import Interlace, DataLoaderUpscaler, Denormalize
 
 
 def progress(count, total, status=''):
