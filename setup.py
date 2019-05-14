@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="udnn",
-    version="0.0.1",
+    version="0.0.2",
     author="Dimitrios Bellos",
     author_email="Dimitrios.Bellos@nottingham.ac.uk",
     description="UDNN",
