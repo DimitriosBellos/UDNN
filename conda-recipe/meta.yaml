@@ -13,12 +13,12 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6.4
     - pip
     - setuptools
   run:
     - python >=3.6.4
-    - pytorch >=0.4
+    - pytorch >=0.4.0
     - numpy
     - h5py
     - pillow
@@ -29,9 +29,9 @@ test:
 
 about:
   home: https://github.com/DimitriosBellos/UDNN
-  license: Apache Software Licence 2.0
+  license: Apache 2.0
   summary: A Convolutional Neural Network for fast upscaling of low-resolution sinograms in x-ray CT time-series
 
 extra:
   recipe-maintainers:
-    DimitriosBellos
+    - DimitriosBellos
