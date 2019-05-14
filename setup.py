@@ -17,6 +17,6 @@ setuptools.setup(
     install_requires=['numpy', 'pillow', 'pytorch>=0.4', 'h5py'],
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: Apple Public Source License",
+        "License :: OSI Approved :: Apache Software License",
     ],
 )
