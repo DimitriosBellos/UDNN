@@ -1,0 +1,5 @@
+python>=3.6.4
+numpy
+h5py
+pytorch>=0.4
+pillow
