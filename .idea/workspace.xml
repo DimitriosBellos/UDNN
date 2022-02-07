@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13db6327-579e-4fed-bbf3-0c3b4fbaf9fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/UDNN.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conda-recipe/meta.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udnn/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udnn/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udnn/trainer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udnn/upscaler.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udnn/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udnn/utils/dataloader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udnn/utils/logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udnn/utils/merge.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/udnn/utils/timer.py" afterDir="false" />
-    </list>
+    <list default="true" id="13db6327-579e-4fed-bbf3-0c3b4fbaf9fa" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
